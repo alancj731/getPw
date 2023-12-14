@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Your Password</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+  <link  rel="stylesheet"  href="./css/styles.css" />
+</head>
+<body>
+<div id="getpassword-form">
+	<div class='fieldset'>
+    <legend>Get Your Password</legend>
+		<form action="/password" method="post" data-validate="parsley">
+			<div class='row'>
+				<label for='uri'>DataBase URI</label>
+				<input type="text" placeholder="Connection string" name='uri' id='uri' data-required="true" data-error-message="Connection string is required">
+			</div>
+			<div class='row'>
+				<label for="database">Database Name</label>
+				<input type="text" placeholder="Database name"  name='database' data-required="true" data-error-message="Database name is required">
+			</div>
+			<div class='row'>
+				<label for="collection">Collection Name</label>
+				<input type="text" placeholder="Collection name" name='collection' data-required="true" data-error-message="Collection name is correspond">
+			</div>
+			<input type="submit" value="Get">
+		</form>
+	</div>
+</div>
+</body>

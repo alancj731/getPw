@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/table_styles.css">
+    <title>Get Your Password</title>
+</head>
+<body>
+    <h3>Your Passwords Are Here</h3>
+
+    <table>
+        <tr>
+          <th>Account Type</th>
+          <th>Login Name</th>
+          <th>Password</th>
+        </tr>
+        <% data.forEach(record => { %>
+          <tr>
+            <% Object.values(record).forEach(value => { %>
+              <td><%= value %></td>
+            <% }); %>
+          </tr>
+        <% }); %>
+    </table>
+
+</body>
+</html>
