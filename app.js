@@ -30,7 +30,9 @@ app.get('/', (req, res) => {
 
 const  getPassword= async (data)=>{
    // get value from formData
-   const uri = data.uri;
+   const password = data.password;
+   var connection_string = "mongodb+srv://jian:<password>@personal.7skk2xv.mongodb.net/?retryWrites=true&w=majority"
+   var uri = connection_string.replace(`<password>`, `${password}`);
    console.log(`uri: ${uri}`)
 
    const database_name = data.database;
